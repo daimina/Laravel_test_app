@@ -7,6 +7,18 @@
                 投稿の編集
             </h5>
 
+            @if ($errors->any())
+                <div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li class='alert-danger'>
+                            {{ $error }}
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             {!!Form::open(['route'=>['posts.update', $post->id], 'method'=>'put'])!!}
                 <div class='form-group'>
                     {!!Form::label('title', 'タイトル')!!}

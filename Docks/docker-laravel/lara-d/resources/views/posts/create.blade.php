@@ -7,6 +7,19 @@
                 投稿の新規作成
             </h5>
 
+            @if ($errors->any())
+                <div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li class='alert-danger'>
+                            {{ $error }}
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+
             <!-- ボタンを押すとstoreに飛ぶ -->
             {!!Form::open(["route"=>"posts.store"])!!}
                 <div class='form-group'>
