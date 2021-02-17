@@ -12,7 +12,7 @@
 <body>
     <header class="navbar navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="{{route('top')}}">
                 Hacksレビュー
             </a>
         </div>
@@ -24,7 +24,7 @@
     </main>
 
     <footer class="footer bg-dark">
-        <div class="container">
+        <div class="container-fluid">
             <p class="text-white text-center">
                 🄫Daiki-Minaguchi All Rights Reserved
             </p>        
